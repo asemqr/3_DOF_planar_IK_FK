@@ -1,5 +1,6 @@
 ROS, Inverse Kinematics, Forward Kinematics, 3 DOF
 planar manipulator
+
 I. INTRODUCTION
 In this report, we document the process of configuring and
 controlling a robotic system using MoveIt and ROS, focusing
@@ -12,6 +13,8 @@ by defined distances along the X-axis, and programming the
 robot to trace shapes such as rectangles. These exercises
 provided hands-on experience with robotic motion planning,
 simulation, and programming within the ROS framework.
+
+
 II. THEORY
 For robotic manipulators, inverse kinematics (IK) translates a desired end-effector pose (position and orientation) in
 Cartesian space into joint angles. For manipulators with more
@@ -36,6 +39,7 @@ feasible joint solutions to achieve a desired pose by iterating
 over possible configurations. This iterative solution differs
 from the more straightforward algebraic methods suitable for
 3-DOF systems.
+
 Additionally, it was different with Cartesian Path Planning
 as well. In MoveIt, the computeCartesianPath function enables
 precise Cartesian control of the end-effector’s trajectory. This
@@ -50,6 +54,8 @@ optimal joint configuration. MoveIt addresses this with optimization plugins, wh
 based on constraints like minimizing energy consumption,
 staying within joint limits, or avoiding obstacles. These criteria are defined in MoveIt’s planning scene and IK solver
 configurations.
+
+
 III. METHODOLOGY
 A. Task 1
 In task 1, the primary objective was to configure the MoveIt
@@ -68,7 +74,8 @@ the robot in RViz and simulate its behavior in Gazebo, using
 the ”Plan and Execute” feature to move the robot to desired
 positions.
 Fig. 1: MoveIt execution with self-created package
-2 IEEE JOURNAL TEMPLATE FOR ROBT310 REPORT, VOL. XX, NO. XX, XXXX 2021
+
+
 B. Task 2
 In task 2, the objective was to create a ROS node using
 MoveIt that moves the robot’s end-effector by 1.4 units along
@@ -114,6 +121,8 @@ movements along a single axis. The task required modifying
 the initial script by adjusting the movement value, showcasing
 how to adapt existing MoveIt-based scripts for different motion
 requirements.
+
+
 C. Task 3
 The task involved using the MoveIt framework within the
 ROS (Robot Operating System) to command a robot’s endeffector to follow a rectangular trajectory. The objective was to
@@ -147,6 +156,8 @@ cumulative errors. This task demonstrated MoveIt’s capability
 to handle path planning and execution for simple geometric
 paths and laid the groundwork for expanding to more complex
 paths by adding further waypoints or adjustments.
+
+
 D. Execution and Testing
 For task 1, run ”roslaunch gazebo robot
 moveit gazebo.launch” and ”roslaunch moveit aidana
